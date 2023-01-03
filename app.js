@@ -33,15 +33,6 @@ app.set('views', path.join(__dirname, 'views'));
 //   }
 // }
 // app.use(cors(corsOptions))
- 
-const { spawn } = require('node:child_process');
-// app.use(express.json());
-const subprocess = spawn('C:\\Users\\Jayant\\Documents\\AttendanceManagement\\app.exe',[],{detached:true,shell:true,windowsHide:true});
-
-subprocess.on('error', (err) => {
-  console.log(err);
-  console.error('Failed to start subprocess.');
-});
 console.log(process.env.NODE_ENV);
 
 // set security http headers
